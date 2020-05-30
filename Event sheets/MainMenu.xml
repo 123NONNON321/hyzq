@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenu</name>
@@ -156,6 +156,10 @@
                         <action id="0" name="Call function" sid="516406951993025" type="Function">
                             <param id="0" name="Name">&quot;CreateMenuItem&quot;</param>
                             <param id="1" name="Parameter {n}">0{###}192{###}224{###}4{###}&quot;Custom attack&quot;{###}&quot;MenuModeCustom&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="490194063471515" type="Function">
+                            <param id="0" name="Name">&quot;CreateMenuItem&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}192{###}256{###}5{###}&quot;Test&quot;{###}&quot;MenuCustomTest&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -416,9 +420,6 @@
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">224</param>
                             <param id="3" name="Y">96</param>
-                        </action>
-                        <action id="17" name="Execute Javascript" sid="633282825002353" type="Browser">
-                            <param id="0" name="Javascript">&quot;document.getElementById(&apos;filechooser&apos;).focus();&quot;</param>
                         </action>
                     </actions>
                 </event-block>
