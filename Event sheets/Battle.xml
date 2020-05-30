@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Battle</name>
@@ -1625,6 +1625,207 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="603064680884595" title="AAA">
+            <sub-events>
+                <variable constant="0" name="A_TYPE" sid="211728070955507" static="0" type="number">0</variable>
+                <event-block sid="262632404737158">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="145823841443385" type="Keyboard">
+                            <param id="0" name="Key">81</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="480220430869392" type="System">
+                            <param id="0" name="Variable">A_TYPE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="701302643021442">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="942156847450222" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="189135621815156" type="System">
+                            <param id="0" name="Variable">A_TYPE</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="794204811111360">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="100434566015959" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="483734733237440" type="RPGText">
+                            <param id="0" name="Instance variable">Name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Attributes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="655691812212394">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="421187851020101" type="System">
+                                    <param id="0" name="Variable">A_TYPE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="135417685852272" type="RPGText">
+                                    <param id="0" name="Text">&quot;HP:&quot;&amp;(HP-KR)&amp; newline &amp;&quot;KR:&quot;&amp;KR&amp; newline &amp;&quot;T&quot;&amp;KR_T&amp; newline &amp;&quot;X:&quot;&amp;PlayerHeart.X&amp; newline &amp;&quot;Y:&quot;&amp;PlayerHeart.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="664745970713520">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="581866547663136" type="System">
+                                    <param id="0" name="Variable">A_TYPE</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="476048715016114" type="RPGText">
+                                    <param id="0" name="Text">Bone.X&amp; newline &amp;Bone.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="227879412029740">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="729322644831479" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="942831337015187" type="KR">
+                            <param id="0" name="X">HPBackground.Width+HPBackground.X+30</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="804539811845930">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="853299425626083" type="RPGText">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HP&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="598269472600337" type="RPGText">
+                                    <param id="0" name="X">KR.X+16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="701595699885283">
+                    <conditions>
+                        <condition id="0" name="On function" sid="349343072545233" type="Function">
+                            <param id="0" name="Name">&quot;TimeScale&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="597610843301747" type="System">
+                            <param id="0" name="Time scale">int(Function.Param(0))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="617369019693850">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="132392496743265" type="Keyboard">
+                            <param id="0" name="Key">49</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="258994041968172" type="System">
+                            <param id="0" name="Variable">MaxHP</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="641585143402633">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="721353446573459" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="420017382754911" type="System">
+                            <param id="0" name="Variable">MaxHP</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="609990140611620">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="786731575492895" type="Keyboard">
+                            <param id="0" name="Key">51</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="255395684431783" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="910187517702110">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="964168472368247" type="Keyboard">
+                            <param id="0" name="Key">52</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="381693030342018" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="412846847252054">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="550245462166875" type="Keyboard">
+                            <param id="0" name="Key">53</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="217629318720482" type="System">
+                            <param id="0" name="Variable">KR</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="937819750733327">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="840276675217087" type="Keyboard">
+                            <param id="0" name="Key">54</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="696272193036527" type="System">
+                            <param id="0" name="Variable">KR_T</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890758832866607">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="904348129585951" type="Keyboard">
+                            <param id="0" name="Key">82</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="411953580200431" type="System">
+                            <param id="0" name="Layout">MainMenu</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="315506884299007" type="Audio" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="5873472645475589" title="BattleMenu">
             <sub-events>
                 <variable constant="0" name="MenuState" sid="5359025861573384" static="1" type="number">0</variable>
@@ -7441,7 +7642,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6768416817698473">
+                <event-block bookmark="1" sid="6768416817698473">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="2486277728362958" type="System">
                             <param id="0" name="Variable">SansAnimation</param>
@@ -7802,6 +8003,66 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="976325070412870">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="186785350458223" type="Attack9Patch">
+                            <param id="0" name="Instance variable">Color</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="658362801614828" type="Attack9Patch">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="814148985576723" type="Attack9Patch">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="645138594049255" type="Attack9Patch">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">45</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="506701580362665" type="Attack9Patch">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="553238626691143">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="784579642388285" type="Attack9Patch">
+                            <param id="0" name="Instance variable">Color</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="570502226672283" type="Attack9Patch">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="977595896225824" type="Attack9Patch">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="323147047593826" type="Attack9Patch">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="445438334211446" type="Attack9Patch">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="6954706747497658">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="4220182392469211" type="System">
@@ -8021,6 +8282,58 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                                <event-block sid="423368826588337">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="737956025296987" type="Attack9Patch">
+                                            <param id="0" name="Instance variable">Color</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="824855028499683" type="PlayerHeart">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Speed">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="291209135882589" type="Function">
+                                            <param id="0" name="Name">&quot;DamagePlayer&quot;</param>
+                                            <param id="1" name="Parameter {n}">Attack9Patch.Damage{###}Attack9Patch.Karma</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="350196202394546">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="851120960210240" type="Attack9Patch">
+                                                    <param id="0" name="Instance variable">Karma</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="404117086578159" type="Attack9Patch">
+                                                    <param id="0" name="Instance variable">Karma</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="306915315210307">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="833581037048753" type="Attack9Patch">
+                                            <param id="0" name="Instance variable">Color</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="911975345785629" type="Function">
+                                            <param id="0" name="Name">&quot;DamagePlayer&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1{###}0</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
